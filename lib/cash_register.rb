@@ -12,7 +12,7 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     new_item = (price*quantity) #need to save new_item seperately from @total so it isn't associate with the instance variable
     @last_transaction = new_item
-    @total = @total + new_item
+    self.total = self.total + new_item
     quantity.times {@item_array << title}
   end
 
