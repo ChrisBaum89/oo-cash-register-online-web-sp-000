@@ -9,9 +9,9 @@ class CashRegister
     @item_array = []
   end
 
-  def total
-    @total
-  end
+  #def total
+    #@total
+  #xend
 
   def add_item(title, price, quantity = 1)
     new_item = (price*quantity) #need to save new_item seperately from @total so it isn't associate with the instance variable
