@@ -1,7 +1,7 @@
 require 'pry'
 
 class CashRegister
-  attr_accessor :total, :discount, :last_transaction
+  attr_accessor :total, :discount, :last_transaction, :items
 
   def initialize(discount = 0)
     @total = 0
@@ -13,7 +13,7 @@ class CashRegister
     new_item = (price*quantity) #need to save new_item seperately from @total so it isn't associate with the instance variable
     self.last_transaction = new_item
     self.total = self.total + new_item
-    quantity.times {@item_array << title}
+    quantity.times {self.items << title}
   end
 
   def apply_discount
